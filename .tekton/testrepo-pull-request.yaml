@@ -274,6 +274,9 @@ spec:
         operator: in
         values:
         - "true"
+      workspaces:
+      - name: build-index
+        workspace: build-index
     - name: build-source-image
       params:
       - name: BINARY_IMAGE
@@ -478,6 +481,8 @@ spec:
     - name: git-auth
       optional: true
     - name: netrc
+      optional: true
+    - name: build-index
       optional: true
   taskRunTemplate: {}
   workspaces:
